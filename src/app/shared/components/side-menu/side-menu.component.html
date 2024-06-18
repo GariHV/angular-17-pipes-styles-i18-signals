@@ -1,0 +1,19 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list>
+      <mat-list-item routerLink="/products">Products</mat-list-item>
+      <mat-list-item routerLink="/posts">Posts</mat-list-item>
+      <mat-list-item routerLink="/pipes">Pipes</mat-list-item>
+      <mat-list-item routerLink="/pipes-example">Pipes Example</mat-list-item>
+      <mat-list-item routerLink="/directives">Directives</mat-list-item>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

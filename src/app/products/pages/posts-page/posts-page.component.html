@@ -1,0 +1,23 @@
+<h2>
+  Lifecycle Demo
+</h2>
+
+<hr>
+
+<div class="row">
+<h2 class="col">Posts:</h2>
+  <div class="col">
+  <button class="col" (click)="cleanup()">clean</button>
+    <button class="col" (click)="fetchData()">refresh</button>
+
+  </div>
+
+</div>
+
+<mat-list>
+  <mat-list-item *ngFor="let post of posts">
+    <h6> {{post.title}} </h6>
+    <p> {{post.body}} </p>
+  </mat-list-item>
+</mat-list>
+

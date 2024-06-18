@@ -1,0 +1,19 @@
+<h2> Properties</h2>
+<hr>
+
+<div class="row">
+  <div class="col-6">
+    <input #txtEmail class="form-control mb-2" type="text" [value]="user().email" (input)="onFieldUpdate('email', txtEmail.value)">
+    <input #txtFirstName class="form-control mb-2" type="text" [value]="user().first_name" (input)="onFieldUpdate('first_name', txtFirstName.value)">
+    <input #txtLastName class="form-control mb-2" type="text" [value]="user().last_name" (input)="onFieldUpdate('last_name', txtLastName.value)">
+
+  </div>
+
+  <div class="col-6">
+    <pre> {{user() | json}}</pre>
+    <button class="btn btn-primary" (click)="increasedBy(1)">+1</button>
+    <p class="mt-3">{{counter()}}</p>
+
+    <p>{{fullName()}}</p>
+  </div>
+</div>

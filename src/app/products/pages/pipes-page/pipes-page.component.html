@@ -1,0 +1,109 @@
+<h2> Pipes </h2>
+ <hr>
+
+<h6>
+  Strings:
+</h6>
+
+<ul>
+  <li>
+    Lowercase: {{name | lowercase}}
+  </li>
+  <li>
+    Uppercase: {{name | uppercase}}
+  </li>
+  <li>
+    Title: {{name | titlecase}}
+  </li>
+</ul>
+
+
+<h6>
+  Dates:
+</h6>
+
+<ul>
+  <li>
+    Standard: {{customDate}}
+  </li>
+  <li>
+    Normal: {{customDate | date}}
+  </li>
+  <li>
+    Short: {{customDate | date: 'short'}}
+  </li>
+  <li>
+    Short Date: {{customDate | date: 'shortDate'}}
+  </li>
+  <li>
+    Long: {{customDate | date : "long"}}
+  </li>
+  <li>
+    Months: {{customDate | date : "MMMM"}}
+  </li>
+  <li>
+    Full Date: {{customDate | date : "dd MMMM, yyyy"}}
+  </li>
+</ul>
+
+<h6>Numbers:</h6>
+
+<ul>
+  <li>
+    Suma: {{( totalSells + 1235) | number: '1.0-2'}}
+  </li>
+  <li>
+    Moneda: {{totalSells | currency: 'EUR': 'symbol' : '1.0-2'}}
+  </li>
+  <li>
+    Porcentaje: {{percent | percent: '1.0-2'}}
+  </li>
+</ul>
+
+
+<h6>UnCommon:</h6>
+
+<div class="grid">
+  <div class="col-12 md:col-6">
+  <p>
+    Invitación: Saludos {{name | titlecase}}, es un placer {{gender | i18nSelect: invitationMap}} a nuestro evento
+  </p>
+    <button class="btn btn-secondary" (click)="changeClient()">Cambiar Perfil
+    </button>
+  </div>
+
+  <div class="col-12 md:col-6 mt-3">
+    <p>Actualmente {{clients.length | i18nPlural: clientsMap}}</p>
+    <button class="btn btn-danger" (click)="deleteClient()">Eliminar Cliente</button>
+  </div>
+  <div class="col-12 md:col-6 mt-3">
+    <h6>Arrays</h6>
+    <ul>
+      <li>
+        Original: {{clients}}
+      </li>
+      <li>
+        Slice: 0:2: {{clients | slice: 0: 2}}
+      </li>
+      <li>
+        Slice: 1:4: {{clients | slice: 1: 4}}
+      </li>
+      <li>
+        Slice: 1:3: {{clients | slice: 1: 3}}
+      </li>
+      <li>
+        Slice: 3:4: {{clients | slice: 3: 4}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-12 md:col-6 mt-3">
+    <h6>Objeto</h6>
+    <p>{{person | json}}</p>
+  </div>
+  <div class="col-12 md:col-6 mt-3"
+  >
+    <h6>Async</h6>
+    <p> {{myObservableTimer | async}}</p>
+    <p>{{promiseValue | async}}</p>
+  </div>
+</div>

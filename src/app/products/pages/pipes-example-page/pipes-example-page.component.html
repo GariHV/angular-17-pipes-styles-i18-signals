@@ -1,0 +1,25 @@
+<h2>Example Pipes</h2>
+
+<ul class="list-group">
+  <li class="list-group-item">
+   <strong> Name:</strong> {{person.name | titlecase}}
+  </li>
+  <li class="list-group-item">
+    <strong> Date: </strong> {{person.date | date: 'shortDate'}}
+  </li>
+  <li class="list-group-item">
+    <strong> Gender: </strong>{{person.gender | uppercase}}
+  </li>
+  <li class="list-group-item">
+    <strong> Currency:</strong>
+     {{person.currency | currency: 'EUR'}}
+  </li>
+</ul>
+
+<h6 class="mt-3">Saludo:</h6>
+
+<p> Saludos {{person.name | uppercase}}, {{person.gender | i18nSelect: invitationMap}} a la plataforma</p>
+
+<button class="btn btn-warning mt-3" (click)="onChangePerson()">
+  Cambiar Persona
+</button>
