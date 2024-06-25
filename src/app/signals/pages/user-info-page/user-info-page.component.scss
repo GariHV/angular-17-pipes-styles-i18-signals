@@ -1,0 +1,20 @@
+.title{
+ color: blue;
+}
+
+.user-info-mail{
+text-transform: capitalize;
+}
+
+.user-info-name{
+text-transform: uppercase;
+}
+
+.user-info-container{
+  h3 {
+    color: brown;
+  }
+  &-color{
+    color: deeppink;
+  }
+}

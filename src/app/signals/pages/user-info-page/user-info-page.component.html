@@ -1,18 +1,18 @@
-<h2>Información del usuario</h2>
+<h2 class="title">Información del usuario</h2>
 <hr>
 
 <div class="row">
   <div class="col-4">
-    <h3>Usuario Actual: {{userID()}}</h3>
+    <h3 class="subtitle">Usuario Actual: {{userID()}}</h3>
     <button class="btn btn-primary" (click)="loadUser(userID() - 1)">Anterior</button>
     &nbsp;
     <button class="btn btn-secondary" (click)="loadUser(userID() + 1)">Siguiente</button>
   </div>
 
-  <div class="col-8" *ngIf="currentUser()">
-    <h3>Usuario</h3>
-    <p>Correo: {{currentUser().email}} </p>
-    <p>Nombre: {{fullName()}}</p>
+  <div class="user-info-container" *ngIf="currentUser()">
+    <h3 class="subtitle">Usuario</h3>
+    <p class="color">Correo: {{currentUser().email}} </p>
+    <p class="user-info-name">Nombre: {{fullName()}}</p>
     <img [src]="currentUser().avatar" alt="Avatar" class="rounded">
   </div>
 
